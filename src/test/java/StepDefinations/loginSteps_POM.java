@@ -19,6 +19,8 @@ public class loginSteps_POM {
     LoginPage login;
     HomePage homePage;
     String url   = "https://opensource-demo.orangehrmlive.com/";
+    String username = "Admin";
+    String password = "admin123";
 
     @Given("Browser is open")
     public void browser_is_open() {
@@ -31,11 +33,11 @@ public class loginSteps_POM {
     public void user_is_on_login_page() {
         driver.navigate().to(url);
     }
-    @When("user enters (.*) and (.*)")
-    public void user_enters_username_and_password(String username, String password) {
+    @When("user enters username and password")
+    public void user_enters_username_and_password() {
         login = new LoginPage(driver);
-        login.enterUsername(username);
-        login.enterPassword(password);
+        login.enterUsername(this.username);
+        login.enterPassword(this.password);
 
     }
     @And("user clicks on Login button")
