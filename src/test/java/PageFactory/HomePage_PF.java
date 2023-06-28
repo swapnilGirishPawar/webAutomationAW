@@ -1,6 +1,5 @@
 package PageFactory;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -18,6 +17,6 @@ public class HomePage_PF {
     }
     public HomePage_PF(WebDriver driver){
         this.driver = driver;
-        PageFactory.initElements(driver, HomePage_PF.class);
+        PageFactory.initElements(driver, this);
     }
 }

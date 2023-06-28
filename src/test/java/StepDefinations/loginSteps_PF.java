@@ -2,18 +2,21 @@ package StepDefinations;
 
 import PageFactory.HomePage_PF;
 import PageFactory.LoginPage_PF;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.LoginPage;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+
+import javax.naming.directory.DirContext;
 
 public class loginSteps_PF {
     WebDriver driver = null;
@@ -23,12 +26,26 @@ public class loginSteps_PF {
     String username = "Admin";
     String password = "admin123";
 
+    @Before
+    public void BeforeTest(){
+        System.out.println("Before test started : ");
+        driver = new ChromeDriver();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
+        driver.manage().window().maximize();
+        System.out.println("Before test ended : ");
+    }
+    @After
+    public void afterTest(){
+         System.out.println("After test started : ");
+        driver.close();
+        driver.quit();
+         System.out.println("After test ended : ");
+    }
+
     @Given("Browser is open")
     public void browser_is_open() {
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
-        driver.manage().timeouts().pageLoadTimeout(40, TimeUnit.SECONDS);
-        driver.manage().window().maximize();
+       System.out.println("Browser is opened");
     }
     @And("User is on login page")
     public void user_is_on_login_page() {
@@ -46,9 +63,10 @@ public class loginSteps_PF {
     }
 
     @Then("user is navigated to the home page")
-    public void user_is_navigated_to_the_home_page() {
+    public void user_is_navigated_to_the_home_page() throws InterruptedException {
         WebElement element = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']"));
         homePage.elementPresent(element);
+        Thread.sleep(3000);
     }
 
 }
