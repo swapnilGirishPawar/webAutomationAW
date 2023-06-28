@@ -1,0 +1,38 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinations.StepsForHooks.TestRunnerHooks
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.130 s <<< FAILURE! -- in StepDefinations.StepsForHooks.TestRunnerHooks
+check login functionality. #1 -- Time elapsed: 0.021 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user enters valid username and password' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user enters valid username and password")
+public void user_enters_valid_username_and_password() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user is land on home page")
+public void user_is_land_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+check login functionality. #2 -- Time elapsed: 0.024 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'user enters valid username and password' and 1 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@When("user enters valid username and password")
+public void user_enters_valid_username_and_password() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user is land on home page")
+public void user_is_land_on_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+

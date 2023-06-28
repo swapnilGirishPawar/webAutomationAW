@@ -1,0 +1,31 @@
+-------------------------------------------------------------------------------
+Test set: StepDefinations.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.786 s <<< FAILURE! -- in StepDefinations.TestRunner
+Test Login Functionality.Check login is successful with valid credentials. -- Time elapsed: 0.058 s <<< ERROR!
+io.cucumber.junit.UndefinedStepException: 
+The step 'Browser is open' and 3 other step(s) are undefined.
+You can implement these steps using the snippet(s) below:
+
+@Given("Browser is open")
+public void browser_is_open() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Given("User is on login page")
+public void user_is_on_login_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("user clicks on Login button")
+public void user_clicks_on_login_button() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@Then("user is navigated to the home page")
+public void user_is_navigated_to_the_home_page() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
