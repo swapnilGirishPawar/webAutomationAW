@@ -8,8 +8,9 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/Features/BackgeroundDemo", glue = {
                 "StepDefinations/BackgroundDemo" }, monochrome = true
-,plugin = {"pretty", "html:target/htmlReports.html"}
+// ,plugin = {"pretty", "html:target/htmlReports.html"}
 )
 public class backgroundTestRunner {
 
 }
+
