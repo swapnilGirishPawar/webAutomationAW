@@ -2,59 +2,33 @@ package StepDefinations;
 
 import Pages.HomePage;
 import Pages.LoginPage;
-import io.cucumber.java.After;
-import io.cucumber.java.Before;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-
-import org.openqa.selenium.By;
+import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 
-import java.time.Duration;
-
-import javax.naming.directory.DirContext;
-
-public class loginSteps {
-    WebDriver driver = null;
+public class loginSteps{
+    private Base base = new Base();
     String url   = "https://opensource-demo.orangehrmlive.com/";
     LoginPage login;
-    HomePage homePage = new HomePage(driver);
+    HomePage homePage = new HomePage(Base.driver);
 
     String username = "Admin";
     String password = "admin123";
 
-    @Before
-    public void BeforeTest(){
-        System.out.println("Before test started : ");
-        driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-        System.out.println("Before test ended : ");
-    }
-    @After
-    public void afterTest(){
-         System.out.println("After test started : ");
-        driver.close();
-        driver.quit();
-         System.out.println("After test ended : ");
-    }
+
+
 
     @Given("Browser is open")
     public void browser_is_open() {
        System.out.println("Browser is opened");
     }
     @And("User is on login page")
-    public void user_is_on_login_page() {
-        driver.navigate().to(url);
+    public void user_is_on_login_page() throws InterruptedException {
+        Base.driver.navigate().to(url);
     }
     @When("user enters username and password.")
-    public void user_enters_username_and_password() {
-        login = new LoginPage(driver);
+    public void user_enters_username_and_password() throws InterruptedException {
+        login = new LoginPage(Base.driver);
+        login.loginPageAssertions();
         login.enterUsername(username);
         login.enterPassword(password);
     }
@@ -65,9 +39,18 @@ public class loginSteps {
 
     @Then("user is navigated to the home page")
     public void user_is_navigated_to_the_home_page() throws InterruptedException {
-        homePage = new HomePage(driver);
+        homePage = new HomePage(Base.driver);
+        login = new LoginPage(Base.driver);
         homePage.HomePageElementPresentAssertions();
         Thread.sleep(3000);
     }
 
+    @Then("user is navigated to the home page with valid credentials")
+    public void user_is_navigated_to_the_home_page_with_valid_credentials() throws InterruptedException {
+        homePage = new HomePage(Base.driver);
+        login = new LoginPage(Base.driver);
+        login.navigateToHomeScreen(username, password);
+        homePage.HomePageElementPresentAssertions();
+        Thread.sleep(3000);
+    }
 }
