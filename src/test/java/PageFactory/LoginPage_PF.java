@@ -10,14 +10,11 @@ import org.openqa.selenium.support.PageFactory;
 public class LoginPage_PF {
 
     @FindBy(name = "username")
-    @CacheLookup
        WebElement txt_username;
     WebDriver driver;
     @FindBy(name = "password")
-    @CacheLookup
     WebElement txt_password;
     @FindBy(xpath = "//button[@type='submit']")
-    @CacheLookup
     WebElement btn_login;
 
     public void enterUsername(String username){

@@ -51,7 +51,7 @@ public class loginSteps_PF {
     public void user_is_on_login_page() {
         driver.navigate().to(url);
     }
-    @When("user enters username and password")
+    @When("user enters username and password.")
     public void user_enters_username_and_password() {
         login = new LoginPage_PF(driver);
         login.enterUsername(username);
