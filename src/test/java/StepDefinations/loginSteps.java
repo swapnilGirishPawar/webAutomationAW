@@ -1,7 +1,7 @@
 package StepDefinations;
 
-import PageFactory.HomePage_PF;
-import PageFactory.LoginPage_PF;
+import Pages.HomePage;
+import Pages.LoginPage;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
@@ -18,11 +18,12 @@ import java.time.Duration;
 
 import javax.naming.directory.DirContext;
 
-public class loginSteps_PF {
+public class loginSteps {
     WebDriver driver = null;
     String url   = "https://opensource-demo.orangehrmlive.com/";
-    LoginPage_PF login;
-    HomePage_PF homePage = new HomePage_PF(driver);
+    LoginPage login;
+    HomePage homePage = new HomePage(driver);
+
     String username = "Admin";
     String password = "admin123";
 
@@ -53,19 +54,19 @@ public class loginSteps_PF {
     }
     @When("user enters username and password.")
     public void user_enters_username_and_password() {
-        login = new LoginPage_PF(driver);
+        login = new LoginPage(driver);
         login.enterUsername(username);
         login.enterPassword(password);
     }
     @And("user clicks on Login button")
     public void user_clicks_on_Login_button(){
-        login.clickLoginButton();
+        login.clickLogin();
     }
 
     @Then("user is navigated to the home page")
     public void user_is_navigated_to_the_home_page() throws InterruptedException {
-        WebElement element = driver.findElement(By.xpath("//a[@class='oxd-main-menu-item']"));
-        homePage.elementPresent(element);
+        homePage = new HomePage(driver);
+        homePage.HomePageElementPresentAssertions();
         Thread.sleep(3000);
     }
 
