@@ -13,9 +13,9 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <cucumberJavaVersion>7.12.1</cucumberJavaVersion>
-    <cucumberJunitVersion>7.12.1</cucumberJunitVersion>
+    <cucumberTestNgVersion>7.12.1</cucumberTestNgVersion>
     <seleniumJavaVersion>4.10.0</seleniumJavaVersion>
-    <junitVersion>4.13.2</junitVersion>
+    <testNgVersion>7.8.0</testNgVersion>
       <maven.compiler.source>1.8</maven.compiler.source>
       <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -32,18 +32,18 @@
       <artifactId>maven-compiler-plugin</artifactId>
       <version>3.8.1</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>${junitVersion}</version>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>${testNgVersion}</version>
       <scope>test</scope>
     </dependency>
-    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
     <dependency>
       <groupId>io.cucumber</groupId>
-      <artifactId>cucumber-junit</artifactId>
-      <version>${cucumberJunitVersion}</version>
-      <scope>test</scope>
+      <artifactId>cucumber-testng</artifactId>
+      <version>${cucumberTestNgVersion}</version>
     </dependency>
     <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
     <dependency>
