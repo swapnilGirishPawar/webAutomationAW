@@ -25,8 +25,7 @@ public class HomePage extends Base {
         Base.driver = driver;
     }
     // page Methods
-    public void HomePageElementPresentAssertions() throws InterruptedException {
-        Thread.sleep(2000);
+    public void HomePageElementPresentAssertions() {
         WebElement element = driver.findElement(img_Admin_Home);
         Assert.assertTrue(element.isDisplayed());
     }

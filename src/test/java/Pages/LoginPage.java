@@ -28,8 +28,7 @@ public class LoginPage extends Base {
         driver.findElement(btn_login).sendKeys(Keys.ENTER);
     }
 
-    public void navigateToHomeScreen(String username, String password) throws InterruptedException {
-        Thread.sleep(2000);
+    public void navigateToHomeScreen(String username, String password){
         driver.findElement(txt_username_login).sendKeys(username);
         driver.findElement(txt_password_login).sendKeys(password);
         driver.findElement(btn_login).sendKeys(Keys.ENTER);
@@ -41,8 +40,7 @@ public class LoginPage extends Base {
         driver.findElement(txt_password_login).sendKeys(username);
         driver.findElement(btn_login).sendKeys(Keys.ENTER);
     }
-    public void loginPageAssertions() throws InterruptedException {
-        Thread.sleep(1000);
+    public void loginPageAssertions() {
         WebElement passField =  driver.findElement(txt_password_login);
         WebElement usrnmField = driver.findElement(txt_username_login);
         Assert.assertTrue(passField.isDisplayed());

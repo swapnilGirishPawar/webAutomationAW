@@ -5,7 +5,7 @@ import Pages.LoginPage;
 import io.cucumber.java.en.*;
 import org.openqa.selenium.WebDriver;
 
-public class loginSteps{
+public class loginSteps {
     private Base base = new Base();
     String url   = "https://opensource-demo.orangehrmlive.com/";
     LoginPage login;
@@ -20,6 +20,7 @@ public class loginSteps{
     @Given("Browser is open")
     public void browser_is_open() {
        System.out.println("Browser is opened");
+
     }
     @And("User is on login page")
     public void user_is_on_login_page() throws InterruptedException {
@@ -38,19 +39,18 @@ public class loginSteps{
     }
 
     @Then("user is navigated to the home page")
-    public void user_is_navigated_to_the_home_page() throws InterruptedException {
+    public void user_is_navigated_to_the_home_page(){
         homePage = new HomePage(Base.driver);
         login = new LoginPage(Base.driver);
         homePage.HomePageElementPresentAssertions();
-        Thread.sleep(3000);
     }
 
     @Then("user is navigated to the home page with valid credentials")
-    public void user_is_navigated_to_the_home_page_with_valid_credentials() throws InterruptedException {
+    public void user_is_navigated_to_the_home_page_with_valid_credentials(){
         homePage = new HomePage(Base.driver);
         login = new LoginPage(Base.driver);
         login.navigateToHomeScreen(username, password);
         homePage.HomePageElementPresentAssertions();
-        Thread.sleep(3000);
     }
+
 }

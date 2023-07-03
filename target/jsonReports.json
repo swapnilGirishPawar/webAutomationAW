@@ -1,1 +1,210 @@
-[{"line":1,"elements":[{"start_timestamp":"2023-06-30T11:14:53.163Z","before":[{"result":{"duration":10513263000,"status":"passed"},"match":{"location":"StepDefinations.Base.BeforeTest()"}}],"line":3,"name":"Check login is successful with valid credentials.","description":"","id":"test-login-functionality;check-login-is-successful-with-valid-credentials.","after":[{"result":{"duration":398492000,"status":"passed"},"match":{"location":"StepDefinations.Base.afterTest()"}}],"type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":4853000,"status":"passed"},"line":4,"name":"Browser is open","match":{"location":"StepDefinations.loginSteps.browser_is_open()"},"keyword":"Given "},{"result":{"duration":6528088000,"status":"passed"},"line":5,"name":"User is on login page","match":{"location":"StepDefinations.loginSteps.user_is_on_login_page()"},"keyword":"And "},{"result":{"duration":1512763000,"status":"passed"},"line":6,"name":"user enters username and password.","match":{"location":"StepDefinations.loginSteps.user_enters_username_and_password()"},"keyword":"When "},{"result":{"duration":1300386000,"status":"passed"},"line":7,"name":"user clicks on Login button","match":{"location":"StepDefinations.loginSteps.user_clicks_on_Login_button()"},"keyword":"And "},{"result":{"duration":5052469000,"status":"passed"},"line":8,"name":"user is navigated to the home page","match":{"location":"StepDefinations.loginSteps.user_is_navigated_to_the_home_page()"},"keyword":"Then "}]}],"name":"Test Login Functionality","description":"","id":"test-login-functionality","keyword":"Feature","uri":"file:src/test/resources/Features/LogIn.feature","tags":[]},{"line":1,"elements":[{"start_timestamp":"2023-06-30T11:15:18.534Z","before":[{"result":{"duration":3923711000,"status":"passed"},"match":{"location":"StepDefinations.Base.BeforeTest()"}}],"line":3,"name":"Check logout is successful.","description":"","id":"test-logout-functionality;check-logout-is-successful.","after":[{"result":{"duration":390105000,"status":"passed"},"match":{"location":"StepDefinations.Base.afterTest()"}}],"type":"scenario","keyword":"Scenario","steps":[{"result":{"duration":8989850000,"status":"passed"},"line":4,"name":"User is on login page","match":{"location":"StepDefinations.loginSteps.user_is_on_login_page()"},"keyword":"Given "},{"result":{"duration":8848416000,"status":"passed"},"line":5,"name":"user is navigated to the home page with valid credentials","match":{"location":"StepDefinations.loginSteps.user_is_navigated_to_the_home_page_with_valid_credentials()"},"keyword":"When "},{"result":{"duration":60656000,"status":"passed"},"line":6,"name":"user clicks on admin image button","match":{"location":"StepDefinations.LogoutSteps.user_clicks_on_admin_image_button()"},"keyword":"And "},{"result":{"duration":1907867000,"status":"passed"},"line":7,"name":"user clicks on Logout button","match":{"location":"StepDefinations.LogoutSteps.user_clicks_on_logout_button()"},"keyword":"And "},{"result":{"duration":1050619000,"status":"passed"},"line":8,"name":"user is navigated to the login page","match":{"location":"StepDefinations.LogoutSteps.user_is_navigated_to_the_login_page()"},"keyword":"Then "}]}],"name":"Test Logout Functionality","description":"","id":"test-logout-functionality","keyword":"Feature","uri":"file:src/test/resources/Features/Logout.feature","tags":[]}]
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-06-30T12:49:12.211Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5076841000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations.Base.BeforeTest()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Check login is successful with valid credentials.",
+        "description": "",
+        "id": "test-login-functionality;check-login-is-successful-with-valid-credentials.",
+        "after": [
+          {
+            "result": {
+              "duration": 161728000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations.Base.afterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2269000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "Browser is open",
+            "match": {
+              "location": "StepDefinations.loginSteps.browser_is_open()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11017899000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on login page",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_is_on_login_page()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1561137000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user enters username and password.",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_enters_username_and_password()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 359785000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on Login button",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_clicks_on_Login_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 3514967000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the home page",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_is_navigated_to_the_home_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test Login Functionality",
+    "description": "",
+    "id": "test-login-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/LogIn.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-06-30T12:49:33.948Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1699965000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations.Base.BeforeTest()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Check logout is successful.",
+        "description": "",
+        "id": "test-logout-functionality;check-logout-is-successful.",
+        "after": [
+          {
+            "result": {
+              "duration": 118314000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinations.Base.afterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6726882000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User is on login page",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_is_on_login_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3356375000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is navigated to the home page with valid credentials",
+            "match": {
+              "location": "StepDefinations.loginSteps.user_is_navigated_to_the_home_page_with_valid_credentials()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 168784000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks on admin image button",
+            "match": {
+              "location": "StepDefinations.LogoutSteps.user_clicks_on_admin_image_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1339409000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user clicks on Logout button",
+            "match": {
+              "location": "StepDefinations.LogoutSteps.user_clicks_on_logout_button()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 624491000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "user is navigated to the login page",
+            "match": {
+              "location": "StepDefinations.LogoutSteps.user_is_navigated_to_the_login_page()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Test Logout Functionality",
+    "description": "",
+    "id": "test-logout-functionality",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/Features/Logout.feature",
+    "tags": []
+  }
+]

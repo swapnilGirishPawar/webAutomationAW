@@ -24,7 +24,7 @@ public class LogoutSteps{
     }
 
     @Then("user is navigated to the login page")
-    public void user_is_navigated_to_the_login_page() throws InterruptedException {
+    public void user_is_navigated_to_the_login_page(){
         login = new LoginPage(Base.driver);
         login.loginPageAssertions();
     }
@@ -33,6 +33,8 @@ public class LogoutSteps{
     public void afterMethod(){
         homePage.clickAdminImageSection();
         homePage.clickLogoutButton();
+        System.out.println("this is @AfterMethod by testNg");
+        System.out.println("THIS RTHI STHIS sfkdhvbxckjbfs.dakbjclb sjkbxfhbdscflsdfhvegrktcgrwlbhesliluhbkgvf k");
     }
 
 
